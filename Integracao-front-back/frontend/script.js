@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const API_URL = "http://localhost:3000";
 
-    $(".buttons button").on("click", function () {
+    $(".bnt-mensagem").on("click", function () {
         const mensagem = $(this).data("mensagem");
 
         $.ajax({
@@ -17,15 +17,14 @@ $(document).ready(function () {
         });
     });
 
-      $(".buttons button").on("click", function () {
+      $(".bnt-data").on("click", function () {
         const data = $(this).data("data");
-
         $.ajax({
             url: `${API_URL}/${data}`,
             method: "POST",
             contentType: "application/json",
             success: function (response) {
-                 $("#resultadodata").text(response.mensagem);
+                 $("#resultadodata").text(response.data);
             },
             error: function (err) {
                   $("#resultadodata").text("Erro ao buscar a mensagem!");

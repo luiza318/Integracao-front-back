@@ -11,20 +11,21 @@ const mensagem = [
       return mensagem[indice];
     }
 
-const agora = new Date();
 
-const opcoesHora = { 
+  function dataHoraFormatadaLocal() {
+  const agora = new Date();
+
+  const opcoesHora = { 
     hour12: false,
     hour: '2-digit', 
     minute: '2-digit', 
     second: '2-digit' 
-};
+  };
 
-const parteData = agora.toLocaleDateString('pt-BR');
+  const parteData = agora.toLocaleDateString('pt-BR');
+  const parteHora = agora.toLocaleTimeString('pt-BR', opcoesHora);
 
-const parteHora = agora.toLocaleTimeString('pt-BR', opcoesHora);
+  return `${parteData} ${parteHora}`;
+}
 
-const dataHoraFormatadaLocal = `${parteData} ${parteHora}`;
-
-
-module.exports = {mensagemAleatoria, dataHoraFormatadaLocal}
+module.exports = { mensagemAleatoria, dataHoraFormatadaLocal };

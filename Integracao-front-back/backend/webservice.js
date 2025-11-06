@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
 
     if (url === '/data' && method === 'POST') {
     try {
-      const data = dataHoraFormatadaLocal; 
+      const data = dataHoraFormatadaLocal(); 
       res.writeHead(200, { 'Content-Type': 'application/json' });
       return res.end(JSON.stringify({ sucesso: true, data }));
     } catch (e) {
