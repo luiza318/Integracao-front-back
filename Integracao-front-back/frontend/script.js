@@ -24,8 +24,10 @@ $(document).ready(function () {
             method: "POST",
             contentType: "application/json",
             success: function (response) {
-                 $("#resultadodata").text(response.data);
-            },
+                   $("#resultadodata").fadeOut(300, function() {
+                    $(this).text(response.data).fadeIn(600);
+            });
+        },
             error: function (err) {
                   $("#resultadodata").text("Erro ao buscar a mensagem!");
             }
