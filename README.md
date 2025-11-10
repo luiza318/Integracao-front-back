@@ -16,6 +16,7 @@ O objetivo é exibir **mensagens aleatórias** e a **data e hora atuais**, consu
 ---
 
 ## 🧩 Estrutura de Pastas
+```
 Integracao-front-back/
 │
 ├── backend/
@@ -29,6 +30,7 @@ Integracao-front-back/
 │ └── style.css # Estilos visuais
 │
 └── package.json
+```
 
 ## 🛠️ Tecnologias Utilizadas
 
